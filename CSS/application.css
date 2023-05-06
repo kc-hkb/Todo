@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header {
   padding: 18px 30px;
   margin-bottom: 30px;
@@ -112,4 +113,57 @@ body {
 .alert {
   color: red;
   text-align: center;
+}
+
+.sectionTitle {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  color: #000000;
+  margin-bottom: 35px;
+}
+
+.board {
+  padding: 30px 17px;
+  background: #F4F4F4;
+  border-radius: 10px;
+  margin-bottom: 26px;
+}
+.board__head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.board__title {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+}
+.board__menu {
+  width: 6px;
+  height: 6px;
+  padding-right: 50px;
+  cursor: pointer;
+}
+.board__dropdownContent {
+  display: none;
+}
+.board__content {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  margin-bottom: 30px;
+}
+
+/*クリックで中身を表示*/
+.board__dropbtn:hover .board__dropdownContent {
+  display: block;
 }
