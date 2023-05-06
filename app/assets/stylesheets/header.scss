@@ -1,0 +1,15 @@
+@import 'variables';
+
+.header {
+  padding: 18px 30px;
+  margin-bottom: 30px;
+  border-bottom:1px solid;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+  }
+}

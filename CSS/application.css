@@ -1,0 +1,115 @@
+.header {
+  padding: 18px 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid;
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.title {
+  font-family: Avenir;
+  font-size: 26px;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 33px;
+}
+
+.text {
+  font-family: Avenir;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+input {
+  height: 40px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  margin-bottom: 33px;
+  padding: 0 10px;
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  background: #F8BD1C;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  font-family: Avenir;
+  font-size: 18px;
+  font-weight: 800;
+}
+.submit-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+html {
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  background-color: rgb(241, 245, 247);
+  font-size: 1em;
+  background-color: #ffffff;
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+}
+
+.float_btn {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  text-align: center;
+  background-color: #8AC542;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.float_btn i {
+  margin-top: 22px;
+}
+
+.notice {
+  color: red;
+  text-align: center;
+}
+
+.alert {
+  color: red;
+  text-align: center;
+}
