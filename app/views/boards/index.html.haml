@@ -1,0 +1,22 @@
+.container
+  %h1.sectionTitle All Boards
+  - @boards.each do |board|
+    .board
+      .board__head
+        .board__title= board.title
+        .board__menu{onclick: "clickEvent()"}
+          = image_tag 'actions.svg', class: 'board__dropbtn'
+          .board__dropdownContent
+            削除
+            -# = link_to '編集する', edit_article_path(@article)
+            -# = link_to '削除する', article_path(@article), data: { method: 'delete', confirm: '本当に削除してよい？'}
+      .board__content= board.content
+
+    -# = link_to '投稿する', edit_article_path(@article)
+
+:javascript
+    function clickEvent() {
+        alert('クリックされました');
+    }
+  let btn = document.getElementsByClassName('board__dropbtn');
+  btn.addEventListener('click', btnClick);
