@@ -4,18 +4,17 @@
     .board
       .board__head
         .board__title= board.title
-        .board__menu{onclick: "clickEvent()"}
+        .board__menu{onclick: "btnClick()"}
           = image_tag 'actions.svg', class: 'board__dropbtn'
-          .board__dropdownContent
+          .board__dropdownContent#test
             = link_to '編集する', edit_board_path(board.id)
-            -# = link_to '削除する', article_path(@article), data: { method: 'delete', confirm: '本当に削除してよい？'}
+            = link_to '削除する', board_path(board.id), data: { method: 'delete', confirm: '本当に削除してよい？'}
       .board__content= board.content
 
   = link_to '+ Add new board', new_board_path
 
-:javascript
-    function clickEvent() {
-        alert('クリックされました');
-    }
-  let btn = document.getElementsByClassName('board__dropbtn');
-  btn.addEventListener('click', btnClick);
+-# :javascript
+
+-#   function btnClick(){
+-#     document.getElementById('test').classList.toggle('active');;
+-#   }

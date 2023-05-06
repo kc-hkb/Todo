@@ -86,7 +86,7 @@ body {
     color: #000000;
   }
   &__menu{
-    width: 6px;
+    width: 130px;
     height: 6px;
     padding-right: 50px;
     cursor: pointer;
@@ -95,7 +95,7 @@ body {
 
   }
   &__dropdownContent{
-  //  display: none;
+    // display: none;  あとで修正する
   }
   &__content{
     font-family: 'Avenir';
@@ -110,7 +110,7 @@ body {
   }
 }
 
-/*クリックで中身を表示*/
-.board__dropbtn:hover .board__dropdownContent {
-  display: block;
-}
+/*クリックで中身を表示 あとで修正する*/
+// .active {
+//   display: block;
+// }

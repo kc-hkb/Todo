@@ -143,7 +143,7 @@ body {
   color: #000000;
 }
 .board__menu {
-  width: 6px;
+  width: 130px;
   height: 6px;
   padding-right: 50px;
   cursor: pointer;
@@ -160,7 +160,4 @@ body {
   margin-bottom: 30px;
 }
 
-/*クリックで中身を表示*/
-.board__dropbtn:hover .board__dropdownContent {
-  display: block;
-}
+/*クリックで中身を表示 あとで修正する*/
