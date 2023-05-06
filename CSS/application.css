@@ -148,9 +148,6 @@ body {
   padding-right: 50px;
   cursor: pointer;
 }
-.board__dropdownContent {
-  display: none;
-}
 .board__content {
   font-family: "Avenir";
   font-style: normal;
