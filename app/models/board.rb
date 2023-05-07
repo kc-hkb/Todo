@@ -3,6 +3,7 @@ class Board < ApplicationRecord
   validates :content, presence: true
 
   belongs_to :user
+  has_many :tasks, dependent: :destroy
 
   def author_name
     user.display_name
