@@ -2,5 +2,11 @@
   %h1.sectionTitle= @task.title
   .task
     .task__content= @task.content
+    - if user_signed_in? && current_user.tasks.exists?(id: @task.id)
+      .dropdown
+        = image_tag 'actions.svg', class: 'board__dropbtn'
+        .task__dropdown-content.mini
+          = link_to '編集する', edit_board_task_path(@board, @task)
+
   - if @task.user.present?
     %p= @task.author_name
