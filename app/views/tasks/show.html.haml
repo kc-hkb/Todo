@@ -1,0 +1,6 @@
+.container
+  %h1.sectionTitle= @task.title
+  .task
+    .task__content= @task.content
+  - if @task.user.present?
+    %p= @task.author_name
