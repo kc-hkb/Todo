@@ -1,4 +1,6 @@
 .container
+  -if @task.eyecatch.attached?
+    .eyecatch= image_tag @task.eyecatch
   %h1.sectionTitle= @task.title
   .task
     .task__content= @task.content
@@ -7,6 +9,7 @@
         = image_tag 'actions.svg', class: 'board__dropbtn'
         .task__dropdown-content.mini
           = link_to '編集する', edit_board_task_path(@board, @task)
+          = link_to '削除する', board_task_path(@board, @task), data: { method: 'delete', confirm: '本当に削除してよい？'}
 
   - if @task.user.present?
     %p= @task.author_name
