@@ -59,6 +59,44 @@ input:focus {
   opacity: 0.8;
 }
 
+.dropbtn {
+  border: none;
+  margin-left: 180px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.board__dropdown-content {
+  font-weight: normal;
+  right: 0;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.board__dropdown-content.mini {
+  min-width: 100px;
+}
+
+.board__dropdown-content a {
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  color: #616161;
+}
+
+.board__dropdown-content a:hover {
+  background-color: white;
+}
+
+.board__dropdown:hover .dropdown-content {
+  display: block;
+}
+
 html {
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -161,3 +199,7 @@ body {
 }
 
 /*クリックで中身を表示 あとで修正する*/
+.eyecatch img {
+  width: 88px;
+  height: 85px;
+}
