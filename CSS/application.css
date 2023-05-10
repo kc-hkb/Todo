@@ -199,3 +199,8 @@ body {
 }
 
 /*クリックで中身を表示 あとで修正する*/
+.eyecatch img {
+  width: 85px;
+  height: 85px;
+}
+
