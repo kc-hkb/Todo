@@ -13,3 +13,13 @@
 
   - if @task.user.present?
     %p= @task.author_name
+
+  .comments
+  %h2 コメント一覧
+  - @comment.each do |comment|
+    .comment
+      %p= comment.content
+      %p= comment.author_name
+
+    %div
+  = link_to '+ Add new Comment', new_board_task_comment_path(@board, @task)
