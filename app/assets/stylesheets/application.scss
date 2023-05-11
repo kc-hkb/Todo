@@ -27,6 +27,10 @@ body {
   background-color:#ffffff;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   padding-left: 30px;
   padding-right: 30px;
@@ -68,53 +72,6 @@ body {
   color: #000000;
   margin-bottom: 35px;
 }
-
-.board {
-  padding: 30px 17px;
-  background: #F4F4F4;
-  border-radius: 10px;
-  margin-bottom: 26px;
-  &__head{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 6px;
-  }
-  &__title{
-    font-family: 'Avenir';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    color: #000000;
-  }
-  &__menu{
-    width: 130px;
-    height: 6px;
-    padding-right: 50px;
-    cursor: pointer;
-  }
-  &__dropbtn{
-
-  }
-  &__dropdownContent{
-    // display: none;  あとで修正する
-  }
-  &__content{
-    font-family: 'Avenir';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-    color: #000000;
-    mix-blend-mode: normal;
-    opacity: 0.4;
-    margin-bottom: 30px;
-  }
-}
-
-/*クリックで中身を表示 あとで修正する*/
-// .active {
-//   display: block;
-// }
 
 .eyecatch {
   img{

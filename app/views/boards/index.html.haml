@@ -1,24 +1,20 @@
 .container
   %h1.sectionTitle All Boards
   - @boards.each do |board|
-    = link_to board_path(id: board.id) do
-      .board
-        .board__head
-          .board__title= board.title
-          - if user_signed_in? && current_user.has_written?(board)
+    .board
+      .board__menu
+        - if user_signed_in? && current_user.has_written?(board)
+          .board_detail_actions
             .dropdown
-              = image_tag 'actions.svg', class: 'board__dropbtn'
-              .board__dropdown-content.mini
+              = image_tag 'actions.svg', class: 'dropbtn'
+              .dropdown-content.mini
                 = link_to '編集する', edit_board_path(board.id)
                 = link_to '削除する', board_path(board.id), data: { method: 'delete', confirm: '本当に削除してよい？'}
-        .board__content= board.content
-        - if board.user.present?
-          %p=board.author_name
-
-  = link_to '+ Add new board', new_board_path
-
--# :javascript
-
--#   function btnClick(){
--#     document.getElementById('test').classList.toggle('active');;
--#   }
+      .board__body
+        = link_to board_path(id: board.id) do
+          .board__title= board.title
+          .board__content= board.content
+          - if board.user.present?
+            %p=board.author_name
+  .newBoard
+    = link_to '+ Add new board', new_board_path, class: "newBoard__link"
