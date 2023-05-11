@@ -1,5 +1,103 @@
+.board {
+  padding: 30px 17px;
+  background: #F4F4F4;
+  border-radius: 10px;
+  margin-bottom: 26px;
+  margin: 16px 16px;
+  padding: 16px 16px;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.board__menu {
+  width: 20%;
+  height: 6px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.board__body {
+  width: 80%;
+  margin-bottom: 6px;
+}
+.board__title {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 6px;
+}
+.board__content {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  padding-bottom: 30px;
+}
+.board_detail {
+  padding-top: 10px;
+  font-size: 12px;
+  position: relative;
+  text-align: right;
+}
+.board_detail img {
+  cursor: pointer;
+  border-radius: 100%;
+  margin-right: 16px;
+}
+.board_actions {
+  text-align: center;
+}
+
+.board_detail_actions {
+  width: 70px;
+  text-align: right;
+  margin-right: 0;
+}
+
+.newBoard {
+  padding: 30px 17px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 16px 16px;
+  margin-bottom: 50px;
+  padding: 16px 16px;
+  height: 160px;
+  border: dotted #F4F4F4;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.newBoard:hover {
+  opacity: 0.8;
+}
+.newBoard a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+}
+.newBoard a::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .dropbtn {
-  margin-left: 180px;
+  border: none;
 }
 
 .dropdown {
@@ -7,7 +105,7 @@
   display: inline-block;
 }
 
-.board__dropdown-content {
+.dropdown-content {
   font-weight: normal;
   display: none;
   right: 0;
@@ -17,21 +115,21 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-.board__dropdown-content.mini {
+.dropdown-content.mini {
   min-width: 100px;
 }
 
-.board__dropdown-content a {
+.dropdown-content a {
   padding: 8px 16px;
   text-decoration: none;
   display: block;
   color: #616161;
 }
 
-.board__dropdown-content a:hover {
+.dropdown-content a:hover {
   background-color: white;
 }
 
-.board__dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
   display: block;
 }

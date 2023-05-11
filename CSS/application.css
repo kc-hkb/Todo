@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .header {
   padding: 18px 30px;
   margin-bottom: 30px;
@@ -59,9 +58,71 @@ input:focus {
   opacity: 0.8;
 }
 
+.board {
+  padding: 30px 17px;
+  background: #F4F4F4;
+  border-radius: 10px;
+  margin-bottom: 26px;
+  margin: 16px 16px;
+  padding: 16px 16px;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.board__menu {
+  width: 20%;
+  height: 6px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.board__body {
+  width: 80%;
+  margin-bottom: 6px;
+}
+.board__title {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 6px;
+  underline: none;
+}
+.board__content {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  padding-bottom: 30px;
+}
+.board_detail {
+  padding-top: 10px;
+  font-size: 12px;
+  position: relative;
+  text-align: right;
+}
+.board_detail img {
+  cursor: pointer;
+  border-radius: 100%;
+  margin-right: 16px;
+}
+.board_actions {
+  text-align: center;
+}
+
+.board_detail_actions {
+  width: 70px;
+  text-align: right;
+  margin-right: 0;
+}
+
 .dropbtn {
   border: none;
-  margin-left: 180px;
 }
 
 .dropdown {
@@ -69,8 +130,9 @@ input:focus {
   display: inline-block;
 }
 
-.board__dropdown-content {
+.dropdown-content {
   font-weight: normal;
+  display: none;
   right: 0;
   position: absolute;
   background-color: white;
@@ -78,22 +140,22 @@ input:focus {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-.board__dropdown-content.mini {
+.dropdown-content.mini {
   min-width: 100px;
 }
 
-.board__dropdown-content a {
+.dropdown-content a {
   padding: 8px 16px;
   text-decoration: none;
   display: block;
   color: #616161;
 }
 
-.board__dropdown-content a:hover {
+.dropdown-content a:hover {
   background-color: white;
 }
 
-.board__dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
@@ -119,6 +181,10 @@ body {
   background-color: rgb(241, 245, 247);
   font-size: 1em;
   background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -162,45 +228,7 @@ body {
   margin-bottom: 35px;
 }
 
-.board {
-  padding: 30px 17px;
-  background: #F4F4F4;
-  border-radius: 10px;
-  margin-bottom: 26px;
-}
-.board__head {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 6px;
-}
-.board__title {
-  font-family: "Avenir";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  color: #000000;
-}
-.board__menu {
-  width: 130px;
-  height: 6px;
-  padding-right: 50px;
-  cursor: pointer;
-}
-.board__content {
-  font-family: "Avenir";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 19px;
-  color: #000000;
-  mix-blend-mode: normal;
-  opacity: 0.4;
-  margin-bottom: 30px;
-}
-
-/*クリックで中身を表示 あとで修正する*/
 .eyecatch img {
   width: 85px;
   height: 85px;
 }
-
