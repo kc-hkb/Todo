@@ -4,6 +4,7 @@
   border-bottom: 1px solid;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .header__logo {
   font-size: 18px;
@@ -87,7 +88,6 @@ input:focus {
   font-size: 18px;
   color: #000000;
   margin-bottom: 6px;
-  underline: none;
 }
 .board__content {
   font-family: "Avenir";
@@ -121,6 +121,42 @@ input:focus {
   margin-right: 0;
 }
 
+.newBoard {
+  padding: 30px 17px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 16px 16px;
+  margin-bottom: 50px;
+  padding: 16px 16px;
+  height: 160px;
+  border: dotted #F4F4F4;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.newBoard:hover {
+  opacity: 0.8;
+}
+.newBoard a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+}
+.newBoard a::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .dropbtn {
   border: none;
 }
@@ -143,6 +179,10 @@ input:focus {
 .dropdown-content.mini {
   min-width: 100px;
 }
+.dropdown-content.mini__profile {
+  min-width: 130px;
+  text-align: center;
+}
 
 .dropdown-content a {
   padding: 8px 16px;
@@ -157,6 +197,81 @@ input:focus {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.avatarIcon img {
+  width: 30px;
+  height: 30px;
+}
+
+.task {
+  background: #F4F4F4;
+  border-radius: 10px;
+  margin: 24px 30px;
+  padding: 20px;
+}
+.task__eyecatch {
+  border-radius: 8px;
+  margin-bottom: 27px;
+}
+.task__eyecatch img {
+  max-width: 100%;
+}
+.task__title {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.newTask {
+  padding: 30px 17px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 24px 30px 24px 30px;
+  padding: 16px 16px;
+  height: 160px;
+  border: dotted #F4F4F4;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.newTask:hover {
+  opacity: 0.8;
+}
+.newTask a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+}
+.newTask a::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.task__menu {
+  text-align: right;
+  display: block;
+}
+
+.profile {
+  text-align: center;
+}
+.profile__aicon img {
+  width: 40px;
+  height: 40px;
 }
 
 html {

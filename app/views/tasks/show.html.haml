@@ -1,25 +1,22 @@
 .container
-  -if @task.eyecatch.attached?
-    .eyecatch= image_tag @task.eyecatch
+  - if user_signed_in? && current_user.tasks.exists?(id: @task.id)
+    .dropdown.task__menu
+      = image_tag 'actions.svg', class: 'board__dropbtn'
+      .dropdown-content.mini
+        = link_to '編集する', edit_board_task_path(@board, @task)
+        = link_to '削除する', board_task_path(@board, @task), data: { method: 'delete', confirm: '本当に削除してよい？'}
   %h1.sectionTitle= @task.title
+  -if @task.eyecatch.attached?
+    .task__eyecatch= image_tag @task.eyecatch
   .task
     .task__content= @task.content
-    - if user_signed_in? && current_user.tasks.exists?(id: @task.id)
-      .dropdown
-        = image_tag 'actions.svg', class: 'board__dropbtn'
-        .task__dropdown-content.mini
-          = link_to '編集する', edit_board_task_path(@board, @task)
-          = link_to '削除する', board_task_path(@board, @task), data: { method: 'delete', confirm: '本当に削除してよい？'}
-
-  - if @task.user.present?
-    %p= @task.author_name
 
   .comments
-  %h2 コメント一覧
+  %h2.comments__title Comment
   - @comment.each do |comment|
-    .comment
-      %p= comment.content
-      %p= comment.author_name
+    .comments__comment
+      .comments__icon.avatarIcon=image_tag comment.user.avatar_image
+      %p.comments__text= comment.content
 
-    %div
-  = link_to '+ Add new Comment', new_board_task_comment_path(@board, @task)
+  .newComment
+    = link_to '+ Add new Comment', new_board_task_comment_path(@board, @task)
