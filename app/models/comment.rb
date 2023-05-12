@@ -6,4 +6,12 @@ class Comment < ApplicationRecord
     user.display_name
   end
 
+  def avatar_image
+    if profile&.avatar&.attached?
+      profile.avatar
+    else
+      'default-avatar.svg'
+    end
+  end
+
 end

@@ -118,6 +118,10 @@
 .dropdown-content.mini {
   min-width: 100px;
 }
+.dropdown-content.mini__profile {
+  min-width: 130px;
+  text-align: center;
+}
 
 .dropdown-content a {
   padding: 8px 16px;
@@ -132,4 +136,9 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.avatarIcon img {
+  width: 30px;
+  height: 30px;
 }

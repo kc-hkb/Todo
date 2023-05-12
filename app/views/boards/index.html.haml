@@ -15,6 +15,6 @@
           .board__title= board.title
           .board__content= board.content
           - if board.user.present?
-            %p=board.author_name
+            .avatarIcon=image_tag current_user.avatar_image
   .newBoard
     = link_to '+ Add new board', new_board_path, class: "newBoard__link"

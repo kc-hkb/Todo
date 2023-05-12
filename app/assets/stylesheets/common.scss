@@ -127,6 +127,11 @@
 
   &.mini {
     min-width: 100px;
+
+    &__profile {
+      min-width: 130px;
+      text-align: center;
+    }
   }
 }
 
@@ -143,4 +148,11 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.avatarIcon {
+  img{
+    width: 30px;
+    height: 30px;
+  }
 }
