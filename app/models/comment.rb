@@ -1,7 +1,6 @@
 class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :task
-  belongs_to :board
 
   def author_name
     user.display_name

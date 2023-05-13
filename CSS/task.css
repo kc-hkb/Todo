@@ -19,6 +19,13 @@
   color: #000000;
   margin-bottom: 30px;
 }
+.task__commentInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.task__commentUsers {
+  display: flex;
+}
 
 .newTask {
   padding: 30px 17px;
@@ -100,7 +107,7 @@
   border-radius: 10px;
   margin: 24px 30px 24px 30px;
   padding: 16px 16px;
-  height: 10px;
+  height: 80px;
   border: dotted #F4F4F4;
   text-align: center;
   position: relative;
