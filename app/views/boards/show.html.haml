@@ -7,7 +7,11 @@
           .task__eyecatch= image_tag task.eyecatch
         .task__title= task.title
       - if task.user.present?
-        .avatarIcon=image_tag current_user.avatar_image
+        .avatarIcon=image_tag task.user.avatar_image
+      = task.comment_count
+      - @comments.each do |comment|
+        .comments__comment
+          .comments__icon.avatarIcon=image_tag comment.user.avatar_image
 
   .newTask
     = link_to '+ Add new Task', new_board_task_path(@board)

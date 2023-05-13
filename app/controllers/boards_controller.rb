@@ -10,6 +10,7 @@ class BoardsController < ApplicationController
   def show
     @board = Board.find(params[:id])
     @tasks = @board.tasks
+    @comments = @tasks.comments
   end
 
   def create
