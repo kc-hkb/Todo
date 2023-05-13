@@ -19,6 +19,16 @@
     color: #000000;
     margin-bottom: 30px;
   }
+  &__commentInfo{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__commentCount{
+
+  }
+  &__commentUsers{
+    display: flex;
+  }
 }
 
 .newTask {
